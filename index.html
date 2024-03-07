@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator | 30 Days, 30 Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <p>Enter your text or URL</p>
+      <div id="qrCodeBox">
+        <img id="qrCode" src="" alt="">
+      </div>
+      <div class="button-container">
+        <div class="copy">
+          <button id="copyQRCode" type="button" title="Copy QR Code"></button>
+        </div>
+        <div class="download">
+          <button id="downloadQRCode" type="button" title="Download QR Code"></button>
+        </div>
+      </div>
+      <div class="error">
+        <p id="errorMessage"></p>
+      </div>
+      <input id="qrCodeData" type="text" placeholder="Text or URL">
+      <button id="generateQRCode" type="button">Generate</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

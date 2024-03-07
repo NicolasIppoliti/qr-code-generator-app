@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #262a2f;
+}
+
+.container {
+  width: 400px;
+  padding: 25px 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10px;
+}
+
+.container p {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border-radius: 5px;
+  border: 1px solid #494eea;
+  height: 50px;
+  outline: none;
+}
+
+#generateQRCode {
+  width: 100%;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #494eea;
+  height: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+#generateQRCode:hover {
+  background: #3938ee;
+}
+
+#qrCodeBox {
+  width: 200px;
+  border-radius: 5px;
+  max-height: 0;
+  overflow: hidden;
+}
+
+#qrCodeBox img {
+  width: 100%;
+  padding: 10px;
+}
+
+#qrCodeBox.active {
+  max-height: 300px;
+  margin: 10px auto;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.error {
+  animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(2px);
+  }
+}
+
+#errorMessage {
+  color: red;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  text-align: center;
+  display: none;
+  max-height: 20px;
+}
+
+#errorMessage.active {
+  display: block;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+#copyQRCode {
+  background: url('./images/copy.svg');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: none;
+}
+
+#copyQRCode:hover {
+  background: url('./images/copy-hover.svg');
+  background-size: cover;
+}
+
+#copyQRCode.active {
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+
+#downloadQRCode {
+  background: url('./images/download.svg');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: none;
+}
+
+#downloadQRCode:hover {
+  background: url('./images/download-hover.svg');
+  background-size: cover;
+}
+
+#downloadQRCode.active {
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
